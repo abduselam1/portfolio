@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                josefin: ['Josefin Sans' ,'sans-serif']
             },
         },
     },
