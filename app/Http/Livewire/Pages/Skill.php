@@ -13,6 +13,10 @@ class Skill extends Component
         // dd($this->skill);
     }
 
+    public function click(){
+        dd('hello');
+    }
+
     public function render()
     {
         return view('livewire.pages.skill');

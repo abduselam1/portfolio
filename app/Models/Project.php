@@ -12,7 +12,9 @@ class Project extends Model
     protected $fillable = [
         'name',
         'cover_image',
-        'year',
+        'start_date',
+        'end_date',
+        'description',
         'company',
         'country',
         'city',

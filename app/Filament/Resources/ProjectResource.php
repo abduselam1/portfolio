@@ -2,20 +2,22 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProjectResource\Pages;
-use App\Filament\Resources\ProjectResource\RelationManagers;
-use App\Models\Project;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
+use App\Models\Project;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\ProjectResource\RelationManagers;
 
 class ProjectResource extends Resource
 {
@@ -29,7 +31,9 @@ class ProjectResource extends Resource
             ->schema([
                 TextInput::make('name')->required(),
                 FileUpload::make('cover_image')->required()->image()->columnSpanFull(),
-                TextInput::make('year')->numeric()->required(),
+                DatePicker::make('start_date')->required(),
+                DatePicker::make('end_date'),
+                Textarea::make('description')->columnSpanFull()->rows(5),
                 TextInput::make('company')->label('Company name'),
                 TextInput::make('country')->label('Country 🌐'),
                 TextInput::make('city')->label('City'),
@@ -45,7 +49,9 @@ class ProjectResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 ImageColumn::make('cover_image'),
-                TextColumn::make('year')->label('Year of started'),
+                TextColumn::make('start_date')->label('Started')->date(),
+                TextColumn::make('end_date')->label('Ended')->date(),
+                
                 TextColumn::make('company'),
                 TextColumn::make('created_at')->dateTime(),
                 

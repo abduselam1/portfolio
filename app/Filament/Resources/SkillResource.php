@@ -6,12 +6,14 @@ use App\Filament\Resources\SkillResource\Pages;
 use App\Filament\Resources\SkillResource\RelationManagers;
 use App\Models\Skill;
 use Filament\Forms;
+use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
@@ -31,8 +33,8 @@ class SkillResource extends Resource
                 TextInput::make('name')->required(),
                 TextInput::make('year')->required()->label('Years of experiance'),
 
-                TextInput::make('primary_color'),
-                TextInput::make('secondary_color'),
+                ColorPicker::make('primary_color'),
+                ColorPicker::make('secondary_color'),
 
 
             ]);
@@ -45,6 +47,7 @@ class SkillResource extends Resource
                 TextColumn::make('name'),
                 ImageColumn::make('image'),
                 TextColumn::make('year'),
+                ColorColumn::make('primary_color'),
                 TextColumn::make('created_at')->dateTime(),
 
 

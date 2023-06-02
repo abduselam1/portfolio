@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('cover_image');
-            $table->string('year');
+            $table->date('start_date');
+            $table->date('end_date')->nullable();
+            $table->longText('description')->nullable();
             $table->string('company');
             $table->string('country');
             $table->string('city');
