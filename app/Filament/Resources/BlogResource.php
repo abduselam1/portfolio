@@ -33,7 +33,7 @@ class BlogResource extends Resource
             ->schema([
                 TextInput::make('title'),
                 FileUpload::make('cover')->image()->required()->columnSpanFull(),
-                MarkdownEditor::make('content')->required()->columnSpanFull(),
+                RichEditor::make('content')->required()->columnSpanFull(),
                 Select::make('categories')->multiple()->relationship('categories','name')->preload()->required(),
                 //
             ]);
@@ -46,7 +46,7 @@ class BlogResource extends Resource
                 TextColumn::make('title'),
                 ImageColumn::make('cover'),
                 TextColumn::make('created_at')->dateTime()
-                
+
             ])
             ->filters([
                 //
@@ -58,14 +58,14 @@ class BlogResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -73,5 +73,5 @@ class BlogResource extends Resource
             'create' => Pages\CreateBlog::route('/create'),
             'edit' => Pages\EditBlog::route('/{record}/edit'),
         ];
-    }    
+    }
 }

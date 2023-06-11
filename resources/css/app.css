@@ -12,3 +12,79 @@
 .deactive-pagination{
     @apply p-2 cursor-pointer bg-gray-200 ml-1 text-sm font-medium rounded-lg text-gray-700;
 }
+
+.blog-style{
+    @apply text-gray-800;
+}
+
+.blog-style h1{
+    @apply text-3xl font-semibold;
+}
+.blog-style h2{
+    @apply text-2xl font-semibold;
+}
+
+.blog-style h3{
+    @apply text-xl font-semibold;
+}
+.blog-style h4{
+    @apply text-lg font-semibold;
+}
+
+.blog-style ul{
+    @apply ml-7;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.blog-style ol{
+    margin-left: 28px;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.blog-style ul ul, ol ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+.blog-style ol ol, ul ol {
+    list-style-type: lower-latin;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+
+.blog-style blockquote{
+    @apply bg-slate-100 border-l-4 border-gray-400 my-2 px-3 py-3 before:text-gray-700;
+}
+
+.blog-style blockquote em{
+    @apply font-medium;
+    display: block;
+
+}
+
+.blog-style p, blockquote, h1, h2, h3, h4, figure{
+    @apply pb-2;
+}
+
+.blog-style h1, h2, h3, h4{
+    @apply mt-3;
+}
+.blog-style figcaption{
+    @apply text-center;
+}
+
+.blog-style a{
+    @apply text-blue-500 ;
+}
+
+.blog-style pre{
+    @apply w-full overflow-x-scroll p-3 bg-slate-700 text-gray-100 rounded-xl;
+}
+
+
+
+
+

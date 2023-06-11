@@ -8,7 +8,7 @@
 
 
         </div>
-        <h5 class="pt-3 font-bold text-lg text-gray-700 ">{{$blog->title}}</h5>
+        <h5 class="pt-3 font-bold text-lg text-gray-600 ">{{$blog->title}}</h5>
         <div class="flex text-sm font-poppin pt-2 text-gray-500">
             <span class="pr-1">{{\Carbon\Carbon::create($blog->created_at)->toFormattedDateString()}}</span>
             <span>. {{$blog->time()}} min read</span>
