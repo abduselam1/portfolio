@@ -2,21 +2,24 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BlogResource\Pages;
-use App\Filament\Resources\BlogResource\RelationManagers;
-use App\Models\Blog;
 use Filament\Forms;
+use App\Models\Blog;
+use Filament\Tables;
+use Illuminate\Support\Str;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\TextInput;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
-use Filament\Tables;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\BlogResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\BlogResource\RelationManagers;
+use Filament\Forms\Components\MarkdownEditor;
 
 class BlogResource extends Resource
 {
@@ -30,7 +33,8 @@ class BlogResource extends Resource
             ->schema([
                 TextInput::make('title'),
                 FileUpload::make('cover')->image()->required()->columnSpanFull(),
-                RichEditor::make('content')->required()->columnSpanFull()
+                MarkdownEditor::make('content')->required()->columnSpanFull(),
+                Select::make('categories')->multiple()->relationship('categories','name')->preload()->required(),
                 //
             ]);
     }

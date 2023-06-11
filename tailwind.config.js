@@ -23,9 +23,14 @@ module.exports = {
             },
             screens:{
                 'xs': '480px',
+            },
+            spacing:{
+                '112': '26rem'
             }
         },
     },
-
-    plugins: [require('@tailwindcss/forms')],
-};
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
+}

@@ -48,4 +48,9 @@ class User extends Authenticatable implements FilamentUser
     public function canAccessFilament(): bool{
         return true;
     }
+
+    public function photo()
+    {
+        return "https://ui-avatars.com/api/?name={$this->name}&color=7F9CF5&background=EBF4FF";
+    }
 }

@@ -1,3 +1,14 @@
+@import '../../vendor/filament/forms/dist/module.esm.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.active-pagination{
+    @apply p-2 cursor-pointer bg-blue-500 ml-1 text-sm font-medium rounded-lg text-gray-200;
+}
+
+.deactive-pagination{
+    @apply p-2 cursor-pointer bg-gray-200 ml-1 text-sm font-medium rounded-lg text-gray-700;
+}

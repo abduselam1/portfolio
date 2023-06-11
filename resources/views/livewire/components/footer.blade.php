@@ -1,7 +1,7 @@
-<div class="w-full px-5 py-5 text-center bg-gray-100  flex justify-center">
+<div class="w-full px-5 py-5 text-center bg-gray-50  flex justify-center">
     <div>
         <span class="text-center text-gray-500 font-semibold">All right reserved &copy; Abduselam</span>
-        <div class="flex pt-2 ">
+        <div class="flex pt-2 flex-wrap justify-center text-center ">
             <a class=" px-2 text-sm text-gray-500 font-semibold " href="/">Home</a>
             <a class=" px-2 text-sm text-gray-500 font-semibold " href="#about">About</a>
             <a class=" px-2 text-sm text-gray-500 font-semibold " href="#skills">Skills</a>

@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicController;
+use App\Http\Livewire\Blog\Index;
+use App\Http\Livewire\Blog\Show;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PublicController::class,'home']);
+Route::get('/', [PublicController::class,'home'])->name('home');
 
+Route::get('/blog',Index::class);
+
+Route::get('/blog/{blog}',Show::class)->name('blog.show');
 // Route::get('blog',[PublicController::class,''])
 
 Route::get('/dashboard', function () {
