@@ -13,7 +13,9 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                josefin: ['Josefin Sans' ,'sans-serif']
+                josefin: ['Josefin Sans' ,'sans-serif'],
+                poppin: ['Poppins','sans-serif'],
+                raleway: ['Raleway','sans-serif']
             },
             colors:{
                 danger: colors.rose,

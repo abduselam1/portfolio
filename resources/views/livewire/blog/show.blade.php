@@ -18,7 +18,7 @@
         </div>
 
         <div class=" mt-5 px-3 sm:px-6 md:px-10">
-            <div className="prose prose-lg" class="blog-style appreance-none">
+            <div className="prose prose-lg" class=" font-raleway blog-style appreance-none">
                 {!! $blog->content !!}
             </div>
 

@@ -1,4 +1,4 @@
-<div class="flex items-start mt-2 py-3 sm:px-5 font-poppin rounded-lg">
+<a href="{{route('blog.show',['blog' => $blog])}}" class="flex items-start mt-2 py-3 sm:px-5 font-poppin rounded-lg">
     <h3 class="text-4xl text-gray-300 font-poppin">{{ $idNumber > 9 ? $idNumber+1 : '0'.$idNumber+1}}</h3>
     <div class="pl-5">
         <div class=" flex flex-wrap">
@@ -16,4 +16,4 @@
         </div>
     </div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
-</div>
+</a>
