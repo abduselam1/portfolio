@@ -73,8 +73,8 @@
         </div>
         <div class="grid grid-cols-6 relative top-1/4 w-full ">
             <div class=" col-span-6 sm:col-span-4 pl-5 text-white">
-                <span class="mb-5 text-lg sm:text-base">Welcome to my portfolio</span>
-                <h2 class="md:text-5xl sm:text-3xl text-2xl pt-5 font-semibold font-josefin ">Hi! I'm Pull stack developer</h2>
+                <span class="mb-5 text-xl sm:text-base">Welcome to my portfolio</span>
+                {{-- <h2 class="md:text-5xl sm:text-3xl text-2xl pt-5 font-semibold font-josefin ">Hi! I'm Pull stack developer</h2> --}}
                 <h2 class="md:text-6xl sm:text-4xl text-3xl ">I mean Full-stack developer 😊</h2>
             </div>
             <div class="sm:col-span-2 ">
