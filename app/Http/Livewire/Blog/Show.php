@@ -117,6 +117,7 @@ class Show extends Component implements HasForms
     public function mount(Request $request,Blog $blog){
         $this->comments = $blog->comments()->orderBy('created_at','desc')->get();
         $this->address = $request->header('Referer');
+        // dd($this->address);
         $blog->views()->create([
             'user_id' => auth() ? \auth()->id() : null,
             'ip_address' => $request->ip()

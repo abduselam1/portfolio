@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ProjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ProjectResource\RelationManagers;
+use Filament\Forms\Components\RichEditor;
 
 class ProjectResource extends Resource
 {
@@ -33,7 +34,7 @@ class ProjectResource extends Resource
                 FileUpload::make('cover_image')->required()->image()->columnSpanFull(),
                 DatePicker::make('start_date')->required(),
                 DatePicker::make('end_date'),
-                Textarea::make('description')->columnSpanFull()->rows(5),
+                RichEditor::make('description')->columnSpanFull(),
                 TextInput::make('company')->label('Company name'),
                 TextInput::make('country')->label('Country 🌐'),
                 TextInput::make('city')->label('City'),

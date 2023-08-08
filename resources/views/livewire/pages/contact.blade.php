@@ -10,7 +10,10 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
-                    <span class=" font-semibold pl-2 group-hover:text-blue-500 ">Addis Ababa, Ethiopia</span>
+                    
+                    <div class="pl-2">
+                        <a href="https://www.google.com/maps/place/Addis+Ababa/@8.9634795,38.6133269,11z/data=!3m1!4b1!4m6!3m5!1s0x164b85cef5ab402d:0x8467b6b037a24d49!8m2!3d8.9806034!4d38.7577605!16zL20vMGR0dGY?entry=ttu" target="_blank" class=" font-semibold pl-2 group-hover:text-blue-500 ">Addis Ababa, Ethiopia</a>
+                    </div>
 
                 </div>
             </div>

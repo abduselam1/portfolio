@@ -23,7 +23,7 @@
                 <div class="flex">
                     <a href="/" class="ml-2 px-3 py-1 text-white font-semibold hover:border-b-2 cursor-pointer rounded-lg" >Home</a>
                     <a href="#skills" class="ml-2 px-3 py-1 text-white font-semibold hover:border-b-2 cursor-pointer rounded-lg" >Skills</a>
-                    <a href="#projects" class="ml-2 px-3 py-1 text-white font-semibold hover:border-b-2 cursor-pointer rounded-lg" >Projects</a>
+                    <a href="#projects" class="ml-2 px-3 py-1 text-white font-semibold hover:border-b-2 cursor-pointer rounded-lg" >Experience</a>
                     <a href="#contact-me" class="ml-2 px-3 py-1 text-white font-semibold hover:border-b-2 cursor-pointer rounded-lg" >Contact me</a>
                     
                     
@@ -107,7 +107,7 @@
         </div>
 
         <div class="pt-10 w-full text-center bg-gray-100">
-            <span id="projects" class="text-center text-gray-800 text-2xl font-bold">Projects</span>
+            <span id="projects" class="text-center text-gray-800 text-2xl font-bold">Experience</span>
             <div class=" w-full">
                 @foreach ($projects as $project)
                     <livewire:pages.project :project="$project" />

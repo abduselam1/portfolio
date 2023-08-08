@@ -60,11 +60,17 @@
                         </svg>
                         <span class="font-semibold pl-2">Share</span>
                     </div>
+                    
 
                     <div x-data="{txt:'Copy link'}" x-show="showShareOptions" @click.away="showShareOptions = false" class="absolute top-0 mt-10 right-0 rounded-xl bg-white ">
                         <a target="_blank" href="https://t.me/share/url?url={{$address}}&text={{$blog->title}}" class="flex py-3 px-3 cursor-pointer hover:bg-gray-100">
                             <img src="{{asset('images/social/Telegram.svg')}}"  class="w-5 h-5" alt="Telegram" >
                             <span class="text-sm font-medium text-gray-700 pl-3 ">Telegram</span>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sharer.php?u={{$address}}" class="flex py-3 px-3 cursor-pointer hover:bg-gray-100">
+                            <img src="{{asset('images/social/facebook.png')}}"  class="w-5 h-5" alt="Facebook" >
+
+                            <span class="text-sm font-medium text-gray-700 pl-3 ">Facebook</span>
                         </a>
                         <div @click="navigator.clipboard.writeText('{{$address}}');
                                  txt = 'Link copied';

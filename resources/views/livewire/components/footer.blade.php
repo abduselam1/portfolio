@@ -20,7 +20,7 @@
                 <img src="{{asset('images/social/GitHub.svg')}}"  class="w-7 h-7" alt="Telegram" >
                 {{-- <img src="" alt=""> --}}
             </a>
-            <a class="px-2" href="https://www.instagram.com/abduselam30/" target="_blank">
+            <a class="px-2" href="https://www.instagram.com/abduselamhafiz/" target="_blank">
                 <img src="{{asset('images/social/Instagram.svg')}}"  class="w-7 h-7" alt="Telegram" >
                 {{-- <img src="" alt=""> --}}
             </a>

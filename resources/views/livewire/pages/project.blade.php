@@ -1,4 +1,4 @@
-<div class="w-full px-20 grid grid-cols-7 py-5 mt-2 rounded-lg relative text-left">
+<div class="w-full px-20 grid grid-cols-7 items-center py-5 mt-2 rounded-lg relative text-left">
     <div class=" col-span-2">
         <h3 class=" text-3xl font-bold text-gray-700">{{$project->name}}</h3>
         <h4 class="text-lg pt-2 font-semibold text-gray-700">{{$project->company}}</h4>
@@ -12,7 +12,9 @@
         </div>
     </div>
     <div class=" col-span-5">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, esse! Nemo nisi perspiciatis amet mollitia accusamus. Nihil, atque fugiat, minima distinctio porro tenetur, magni architecto quisquam omnis possimus reiciendis saepe?</span>
+        <span class="blog-style">
+            {!! $project->description !!}
+        </span>
     </div>
     {{-- The best athlete wants his opponent at his best. --}}
 </div>
